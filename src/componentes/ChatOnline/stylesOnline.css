@@ -1,0 +1,84 @@
+.chatonline__principal {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 8px auto;
+    padding: 16px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: white;
+    max-width: 500px;
+    width: 90%;
+    overflow-wrap: break-word;
+}
+
+.chatonline__principal h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.chatonline__principal button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    float: right;
+}
+
+.chatonline__principal button:hover {
+    background-color: gray;
+}
+
+.chatonline__cabecalho {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.separacao__cabecalho {
+    border: none;
+    border-top: 1px solid black;
+    margin: 10px 0;
+}
+
+.chatonline mensagens {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 300px;
+    padding-right: 8px;
+}
+
+.chatonline__mensagens {
+    max-height: 700px;
+    overflow-y: auto;
+    margin: 8px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chatonline__mensagens div {
+    margin-bottom: 8px;
+    background-color: gray;
+    padding: 8px;
+    border-radius: 8px;
+    word-break: break-word;
+    max-width: 100%;
+}
+
+.chatonline__input {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+.chatonline__input input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+

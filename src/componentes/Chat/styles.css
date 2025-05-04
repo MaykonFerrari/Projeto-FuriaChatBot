@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,700;1,700&display=swap');
+
+:root {
+    --font-family: "Montserrat", sans-serif;
+    --font-family-secundaria: "Cascadia Mono", sans-serif;
+}
+
+.chat__iniciador {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+.chat__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.chat__nuuvem {
+    background-color: black;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 16px;
+    position: relative;
+    white-space: nowarp;
+    font-family: var(--font-family);
+}
+
+.chat__box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    height: 500px;
+    border: 2px solid black;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1000;
+    gap: 2%;
+    background-image: url(../../../public/furiaBackground-Chat.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.chat__cabecalho {
+    background-color: white;
+    padding: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    font-family: var(--font-family-secundaria);
+}
+
+.chat__corpo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-right: 10px;
+    overflow-y: auto;
+}
+
+.perguntas__rapidas {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.mensagem.bot.rapida {
+    background-color: #F5F5F5;
+    color: black;
+    border-radius: 18px 18px 18px 18px;
+    padding: 10px 14px;
+    max-width: 70%;
+    margin: 0;
+    margin-right: 2%;
+    font-weight: 400;
+}
+
+.message {
+    background: #F5F5F5;
+    color: black;
+    border-radius: 18px 18px 18px 18px;
+    padding: 10px;
+    margin: 5px 0 5px 2%;
+    max-width: 70%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-line;
+    font-weight: 400;
+}
+
+.message.bot {
+    align-self: flex-start;
+    justify-content: flex-start;
+    font-family: var(--font-family);
+}
+
+.message.user {
+    justify-content: flex-end;
+    align-self: flex-end;
+    margin-left: auto;
+    font-family: var(--font-family);
+}
+
+.chat__fechar {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.icone__evento {
+    width: 16px;
+    vertical-align: middle;
+    margin-right: 6;
+    margin-right: 8px;
+    align-items: center;
+}
+
+.icone__evento__campeonato {
+    width: 20px;
+    margin-right: 4px;
+    vertical-align: middle;
+    border-radius: 8px;
+}
+
+.referencia__links {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.referencia__links:hover {
+    transform: scale(1.05);
+}
+
+.avatar {
+    margin-bottom: 8px;
+    display: inline-flex;
+}
+
+.avatar__icone {
+    margin-right: 3px;
+    width: 24px;
+    border-radius: 8px;
+}
+
+.text {
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-size: 14px;
+}
+
+.torcedor {
+    font-size: 20px;
+    font-weight: 1000;
+    font-family: var(--font-family-secundaria);
+}
+
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  .chat__box {
+    animation: fadeInUp 0.3s ease;
+    opacity: 1;
+    transform-origin: bottom right;
+    transition: opacity 0.3s ease;
+  }
